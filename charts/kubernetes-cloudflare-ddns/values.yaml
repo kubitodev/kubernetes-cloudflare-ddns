@@ -1,0 +1,25 @@
+#####################################################
+## Kubito Kubernetes Cloudflare DDNS Configuration ##
+#####################################################
+
+cron:
+  name: cloudflare-ddns
+
+  job:
+    schedule: "*/5 * * * *"
+    successfulJobsHistoryLimit: 1
+
+  image:
+    repository: kubitodev/kubernetes-cloudflare-ddns
+    tag: latest
+  
+  pod:
+    restartPolicy: OnFailure
+
+secret:
+  name: cloudflare-ddns
+
+  authKey: ""
+  dnsRecord: ""
+  recordId: ""
+  zoneId: ""

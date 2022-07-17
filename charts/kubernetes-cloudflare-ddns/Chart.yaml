@@ -1,0 +1,8 @@
+name: kubernetes-cloudflare-ddns
+maintainers:
+  - name: kubitodev
+    email: admin@kubito.dev
+    url: https://kubito.dev
+apiVersion: v2
+version: 0.0.1
+description: Kubito Kubernetes Cloudflare DDNS Helm Chart
