@@ -6,11 +6,13 @@ This is a simple Kubernetes cronjob which can be used for updating a DNS record 
 
 * Login to Cloudflare and [create an API key](https://dash.cloudflare.com/profile/api-tokens) for your domain on Cloudflare with the following settings:
 
-    1. Token Name: `Edit Zone DNS`.
-    2. Permissions: `Zone -> DNS -> Edit`.
-    3. Zone Resources: `Include -> All zones`.
-    4. Client API Filtering can be left as default.
-    5. TTL can be left as default.
+```txt
+Token Name: `Edit Zone DNS`.
+Permissions: `Zone -> DNS -> Edit`.
+Zone Resources: `Include -> All zones`.
+Client API Filtering can be left as default.
+TTL can be left as default.
+```
 
 Now replace `AUTH_KEY` in `.env` with the key you just generated.
 
