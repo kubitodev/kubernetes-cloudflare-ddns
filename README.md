@@ -50,8 +50,4 @@ kubectl apply -f manifests/cronjob.yaml
 
 ## Installing with Helm
 
-There is a helm chart available as well. To use it, simply open `charts/kubernetes-cloudflare-ddns/values.yaml` and replace the secret values with your own, and replace anything else that you want. Then run:
-
-```bash
-helm install kubernetes-cloudflare-ddns --namespace cloudflare-ddns --create-namespace charts/kubernetes-cloudflare-ddns
-```
+There is a helm chart available as well. Check [the ArtifactHub page](https://artifacthub.io/packages/helm/kubitodev/kubernetes-cloudflare-ddns) for more details.
