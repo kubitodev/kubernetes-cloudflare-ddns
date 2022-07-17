@@ -1,6 +1,12 @@
 # Kubernetes Cloudflare DDNS
 
-This is a simple Kubernetes cronjob which can be used for updating a DNS record on Cloudflare. To get started, you need to do the following:
+This is a simple Kubernetes cronjob which can be used for updating a DNS record on Cloudflare.
+
+## Installing with Helm
+
+There is a helm chart available as well. Check [the ArtifactHub page](https://artifacthub.io/packages/helm/kubitodev/kubernetes-cloudflare-ddns) for more details.
+
+## Installing with `kubectl`
 
 * Replace the name of the `.env.example` file in this repository to `.env`.
 
@@ -34,7 +40,6 @@ You will get a JSON object returned, and you can use a prettifier or something t
 
 * Replace the `NAME` value in `.env` with your domain or subdomain.
 
-## Installing with `kubectl`
 
 * Create the Kubernetes secret in your cluster:
 
@@ -48,6 +53,18 @@ kubectl create secret generic cloudflare-ddns --type=Opaque --dry-run=client --f
 kubectl apply -f manifests/cronjob.yaml
 ```
 
-## Installing with Helm
+## License
 
-There is a helm chart available as well. Check [the ArtifactHub page](https://artifacthub.io/packages/helm/kubitodev/kubernetes-cloudflare-ddns) for more details.
+Copyright &copy; 2022 Kubito
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
